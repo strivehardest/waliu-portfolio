@@ -1,8 +1,14 @@
+
+import Head from "next/head";
 import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="max-w-4xl mx-auto p-6">
+    <>
+      <Head>
+        <title>About | Waliu Portfolio</title>
+      </Head>
+      <section className="max-w-4xl mx-auto p-6">
       <div className="flex flex-col md:flex-row items-center gap-8">
         {/* Profile Picture */}
         <div className="flex-shrink-0">
@@ -125,20 +131,43 @@ export default function About() {
           
           {/* Skills/Technologies */}
           <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-3">Technologies I Work With:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['React', 'Next.js', 'JavaScript', 'Django', 'HTML', 'CSS', 'WordPress', 'Node.js', 'Tailwind CSS', 'MongoDB', 'Git', 'Vercel', 'Github'].map((tech) => (
-                <span 
-                  key={tech}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+            <h3 className="text-xl font-semibold mb-3">Tech Stack & Expertise:</h3>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { name: 'React', icon: 'https://cdn.worldvectorlogo.com/logos/react-2.svg' },
+                { name: 'Next.js', icon: 'https://cdn.worldvectorlogo.com/logos/nextjs-2.svg' },
+                { name: 'Node.js', icon: 'https://cdn.worldvectorlogo.com/logos/nodejs-1.svg' },
+                { name: 'Django', icon: 'https://cdn.worldvectorlogo.com/logos/django.svg' },
+                { name: 'Tailwind CSS', icon: 'https://cdn.worldvectorlogo.com/logos/tailwindcss.svg' },
+                { name: 'JavaScript', icon: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg' },
+                { name: 'TypeScript', icon: 'https://cdn.worldvectorlogo.com/logos/typescript.svg' },
+                { name: 'Python', icon: 'https://cdn.worldvectorlogo.com/logos/python-5.svg' },
+                { name: 'HTML5', icon: 'https://cdn.worldvectorlogo.com/logos/html-1.svg' },
+                { name: 'CSS3', icon: 'https://cdn.worldvectorlogo.com/logos/css-3.svg' },
+                { name: 'WordPress', icon: 'https://cdn.worldvectorlogo.com/logos/wordpress-icon.svg' },
+                { name: 'Bootstrap', icon: 'https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg' },
+                { name: 'Framer Motion', icon: 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg' },
+                { name: 'PostgreSQL', icon: 'https://cdn.worldvectorlogo.com/logos/postgresql.svg' },
+                { name: 'MongoDB', icon: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg' },
+                { name: 'Shopify', icon: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' },
+                { name: 'Vercel', icon: 'https://www.svgrepo.com/show/354513/vercel-icon.svg' },
+                { name: 'Render', icon: 'https://images.seeklogo.com/logo-png/53/1/render-logo-png_seeklogo-532232.png' },
+                { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+                { name: 'Elementor', icon: 'https://cdn.iconscout.com/icon/free/png-256/free-elementor-logo-icon-svg-download-png-3029975.png' },
+              ].map((tech) => (
+                <span
+                  key={tech.name}
+                  className="flex items-center gap-2 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
                 >
-                  {tech}
+                  <img src={tech.icon} alt={tech.name + ' icon'} className="w-5 h-5" style={{ display: 'inline' }} />
+                  {tech.name}
                 </span>
               ))}
             </div>
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

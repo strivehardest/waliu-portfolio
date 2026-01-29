@@ -108,7 +108,7 @@ body {
   .btn-secondary {
     @apply bg-transparent border-2 border-accent-light dark:border-accent-dark 
            text-accent-light dark:text-accent-dark px-6 py-3 rounded-lg
-           hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark
+           hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white
            transition-all duration-200 font-neue-machina font-normal;
   }
 }

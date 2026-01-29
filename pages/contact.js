@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +20,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="max-w-2xl mx-auto p-6">
+    <>
+      <Head>
+        <title>Contact | Waliu Portfolio</title>
+      </Head>
+      <section className="max-w-2xl mx-auto p-6">
       <h1 className="text-4xl font-bold mb-4 text-center">Require My Services</h1>
       <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
         Ready to bring your project to life? Let's discuss how I can help you create amazing web solutions.
@@ -127,6 +133,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,0 +1,9 @@
+# Add your favicon here
+# 1. Place your image (e.g., profile.jpg or profile.png) in the public directory.
+# 2. Convert it to favicon.ico (you can use an online converter if needed).
+# 3. Place favicon.ico in the public directory.
+# 4. Add the following to your _app.js or _document.js <Head> section:
+# <link rel="icon" href="/favicon.ico" />
+# If you want to use a PNG or JPG:
+# <link rel="icon" type="image/png" href="/profile.png" />
+# <link rel="icon" type="image/jpeg" href="/profile.jpg" />
